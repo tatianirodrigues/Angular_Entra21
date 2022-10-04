@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <span>Tela inicial</span>
+</mat-toolbar>
+<section>
+  <div class="example-button-row">
+      <button mat-raised-button id="botao1"
+              (click)="irParaTelaListagemVacinas()">Consultar Vacinas</button>
+      <button mat-raised-button id="botao2"
+              (click)="irParaTelaCadastroVacinas()">Nova Vacina</button>
+      <button mat-raised-button id="botao3"
+              (click)="irParaTelaListagemPesquisadores()">Consultar Pesquisadores</button>
+      <button mat-raised-button id="botao4"
+              (click)="irParaTelaCadastroPesquisadores()">Novo Pesquisador</button>
+  </div>
+</section>
+<router-outlet></router-outlet>
+
+

@@ -1,0 +1,47 @@
+<mat-toolbar color="accent">
+  <span>Nova vacina</span>
+</mat-toolbar>
+
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Nome Pesquisador</mat-label>
+  <input matInput name="nome" type="text"
+        [(ngModel)]="pessoa.nome">
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Cpf</mat-label>
+  <input matInput name="cpf" type="text"
+        [(ngModel)]="pessoa.cpf">
+</mat-form-field>
+
+<br>
+
+<mat-form-field appearance="fill">
+  <mat-label>Matrícula</mat-label>
+  <input matInput name="matricula" type="number"
+        [(ngModel)]="pessoa.matricula">
+</mat-form-field>
+
+<br>
+<mat-form-field appearance="fill">
+  <mat-label>Data de Início de Nascimento:</mat-label>
+  <input matInput [matDatepicker]="picker"
+         [(ngModel)]="pessoa.dataNascimento">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+
+
+<section>
+  <div class="example-button-row">
+      <button mat-flat-button color="primary"
+              (click)="salvarPessoa()">Salvar</button>
+
+      <button mat-flat-button color="accent"
+              (click)="limpar()">Limpar</button>
+  </div>
+</section>
+<pre>{{pessoa | json}}</pre>

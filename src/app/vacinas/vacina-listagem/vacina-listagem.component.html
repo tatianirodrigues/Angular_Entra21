@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <span>Listagem de vacinas</span>
+</mat-toolbar>
+
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> #ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="paisOrigem">
+      <th mat-header-cell *matHeaderCellDef> País de Origem </th>
+      <td mat-cell *matCellDef="let element"> {{element.paisOrigem}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="estagio">
+      <th mat-header-cell *matHeaderCellDef> Estágio da Pesquisa </th>
+      <td mat-cell *matCellDef="let element"> {{element.estagioPesquisa}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dataInicio">
+      <th mat-header-cell *matHeaderCellDef>  Data de Início da Pesquisa </th>
+      <td mat-cell *matCellDef="let element"> {{element.dataInicioPesquisa  | date:'dd/MM/yyyy'}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="responsavel">
+      <th mat-header-cell *matHeaderCellDef> Responsável </th>
+      <td mat-cell *matCellDef="let element"> {{element.pesquisadorResponsavel.nome}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<section>
+  <div class="example-button-row">
+      <button mat-flat-button color="primary">Buscar todas</button>
+      <button mat-flat-button color="accent">Buscar por id</button>
+      <button mat-flat-button color="accent">Buscar por pesquisador</button>
+      <button mat-flat-button color="warn">Voltar</button>
+  </div>
+</section>
