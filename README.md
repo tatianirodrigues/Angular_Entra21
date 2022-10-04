@@ -1,4 +1,4 @@
-<h2> Exercícios da disciplina de HTML/CSS do curso ENTRA-21 </h2>
+<h2> Exercícios da disciplina de Angular do curso ENTRA-21 </h2>
 
 # Entra21AngularTatiani
 
